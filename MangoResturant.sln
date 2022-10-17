@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{F5F63A0E-61E2-44CE-BD48-5B565922CAF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Web", "Mango.Web\Mango.Web.csproj", "{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DFDEE4A1-602E-4885-B318-856DE354AB40}"
+	ProjectSection(SolutionItems) = preProject
+		NugetPackagesCommand.txt = NugetPackagesCommand.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.Identity", "Mango.Services.Identity\Mango.Services.Identity.csproj", "{C238BD22-7AA0-40F9-8E17-B53B6625CC90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C238BD22-7AA0-40F9-8E17-B53B6625CC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C238BD22-7AA0-40F9-8E17-B53B6625CC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C238BD22-7AA0-40F9-8E17-B53B6625CC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C238BD22-7AA0-40F9-8E17-B53B6625CC90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117} = {F5F63A0E-61E2-44CE-BD48-5B565922CAF1}
+		{C238BD22-7AA0-40F9-8E17-B53B6625CC90} = {DFDEE4A1-602E-4885-B318-856DE354AB40}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {223DE76C-CB87-42B4-B7E2-E191A53828DD}
+	EndGlobalSection
+EndGlobal

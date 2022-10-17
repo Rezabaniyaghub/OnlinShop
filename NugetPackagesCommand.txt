@@ -1,0 +1,19 @@
+//common services packages
+Install-Package AutoMapper
+Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection
+Install-Package Microsoft.AspNetCore.Authentication.JwtBearer
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Newtonsoft.Json
+Install-Package Swashbuckle.AspNetCore.Annotations
+Install-Package Swashbuckle.AspNetCore.Swagger
+Install-Package Swashbuckle.AspNetCore.SwaggerUI
+
+//-------------------------------------------------------
+Install-Package Azure.Messaging.ServiceBus
+//-------------------------------------------------------
+For Gateway :
+Install-Package IdentityModel
+Install-Package Microsoft.AspNetCore.Authentication.JwtBearer
+Install-Package Ocelot
