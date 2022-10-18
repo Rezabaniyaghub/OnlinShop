@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{F5F63A0E-61E2-44CE-BD48-5B565922CAF1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Web", "Mango.Web\Mango.Web.csproj", "{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "onlineshopping", "Mango.Web\onlineshopping.csproj", "{29DD6EB4-8BB5-4A94-854D-A83A4D8B3117}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DFDEE4A1-602E-4885-B318-856DE354AB40}"
 	ProjectSection(SolutionItems) = preProject
