@@ -12,7 +12,7 @@ namespace onlineshopping.Srvices.Entites
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-        
+
         }
         public DbSet<Student> Students { get; set; }
     }

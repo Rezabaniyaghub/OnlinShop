@@ -12,7 +12,7 @@ using onlineshopping.Srvices.Entites;
 namespace onlineshopping.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221018092256_InitialAppDbContext")]
+    [Migration("20221020062031_InitialAppDbContext")]
     partial class InitialAppDbContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,8 +32,22 @@ namespace onlineshopping.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"), 1L, 1);
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("CellPhone")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("FatherName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -44,6 +58,11 @@ namespace onlineshopping.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("TellNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.HasKey("StudentId");
 
