@@ -1,0 +1,71 @@
+﻿@model Student
+<form action="/Student/Delete" method="post" asp-antiforgery="true">
+    <input type="hidden" name="@nameof(Model.StudentId)" value="@Model.StudentId" />
+    <div class="row col-md-12">
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                FirstName
+                <input type="text" asp-for="FirstName" autocomplete="off" placeholder="Please EnterNumber" />
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                LastName
+                <input type="text" asp-for="LastName" autocomplete="off" placeholder="Please LastName" />
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                BirthDate
+                <input type="date" asp-for="BirthDate" autocomplete="off" />
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                TellNumber
+                <input type="tel" asp-for="TellNumber" autocomplete="off" />
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                CellPhone
+                <input type="tel" asp-for="CellPhone" autocomplete="off" />
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                Address
+                <input type="text" asp-for="Address" autocomplete="off" />
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="form-label">
+                FatherName
+                <input type="text" asp-for="FatherName" autocomplete="off" />
+            </label>
+        </div>
+    </div>
+    <div class="form-group col-md-3">
+        <button type="submit" class="btn btn-sm btn-primary">Delete</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
