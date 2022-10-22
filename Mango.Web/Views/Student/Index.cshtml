@@ -10,14 +10,14 @@
        <table class="table table-striped table-hover">
            <thead>
                <tr>
-                    <th>StudentId</th>
-                    <th>FirstName</th>
-                    <th>LastName</th>
-                   <th>BirhDate</th>
-                   <th>TellNumber</th>
-                   <th>CellPhone</th>
-                   <th>Addrss</th>
-                   <th>FatherName</th> 
+                    <th>کد دانش اموزی</th>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>نام پدر</th>
+                    <th>تاریخ تولد</th>
+                   <th>شماره تلفن</th>
+                   <th>شماره منزل</th>
+                   <th>آدرس</th>
                    <th></th>
                </tr>
            </thead>
@@ -28,11 +28,11 @@
                         <td>@item.StudentId</td>
                         <td>@item.FirstName</td>
                         <td>@item.LastName</td>
+                        <td>@item.FatherName</td>
                         <td>@item.BirthDate.ToString("d")</td>
                         <td>@item.TellNumber</td>
                         <td>@item.CellPhone</td>
                         <td>@item.Address</td>
-                        <td>@item.FatherName</td>
                         <td>
                             <a href="/Student/edit?studentid=@item.StudentId" class="btn btn-outline-danger">
                                 <i class="fas fa-edit"> </i>

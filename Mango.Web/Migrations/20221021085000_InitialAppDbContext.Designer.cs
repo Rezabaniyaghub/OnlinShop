@@ -12,7 +12,7 @@ using onlineshopping.Srvices.Entites;
 namespace onlineshopping.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221020062031_InitialAppDbContext")]
+    [Migration("20221021085000_InitialAppDbContext")]
     partial class InitialAppDbContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
