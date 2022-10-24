@@ -1,47 +1,47 @@
 ﻿@model Student
 <form action="/Student/Delete" method="post" asp-antiforgery="true">
-    <input type="hidden" name="@nameof(Model.StudentId)" value="@Model.StudentId" />
+    <input type="hidden" asp-for="StudentId" />
     <div class="row col-md-12">
         <div class="form-group col-md-3">
             <label class="form-label">
                 نام
-                <input type="text" asp-for="FirstName" autocomplete="off" />
+                <input type="text" disabled asp-for="FirstName" autocomplete="off" />
             </label>
         </div>
         <div class="form-group col-md-3">
             <label class="form-label">
                 نام خانوادگی
-                <input type="text" asp-for="LastName" autocomplete="off" />
+                <input type="text" disabled asp-for="LastName" autocomplete="off" />
             </label>
         </div>
         <div class="form-group col-md-3">
             <label class="form-label">
                 نام پدر
-                <input type="text" asp-for="FatherName" autocomplete="off" />
+                <input type="text" disabled asp-for="FatherName" autocomplete="off" />
             </label>
         </div>
         <div class="form-group col-md-3">
             <label class="form-label">
                 تاریخ تولد
-                <input type="date" asp-for="BirthDate" autocomplete="off" />
+                <input type="date" disabled asp-for="BirthDate" autocomplete="off" />
             </label>
         </div>
         <div class="form-group col-md-3">
             <label class="form-label">
                 شماره تلفن
-                <input type="tel" asp-for="TellNumber" autocomplete="off" />
+                <input type="tel" disabled asp-for="TellNumber" autocomplete="off" />
             </label>
         </div>
         <div class="form-group col-md-3">
             <label class="form-label">
                 شماره منزل
-                <input type="tel" asp-for="CellPhone" autocomplete="off" />
+                <input type="tel" disabled asp-for="CellPhone" autocomplete="off" />
             </label>
         </div>
         <div class="form-group col-md-3">
             <label class="form-label">
                 آدرس
-                <input type="text" asp-for="Address" autocomplete="off" />
+                <input type="text" disabled asp-for="Address" autocomplete="off" />
             </label>
         </div>
     </div>

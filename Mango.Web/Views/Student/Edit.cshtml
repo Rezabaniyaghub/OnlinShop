@@ -1,6 +1,6 @@
 ﻿@model Student
 <form action="/Student/Edit" method="post" asp-antiforgery="true">
-    <input type="hidden" name="@nameof(Model.StudentId)" value="@Model.StudentId" />
+    <input type="hidden" asp-for="StudentId" />
     <div class="row col-md-12">
         <div class="form-group col-md-3">
             <label class="form-label">
