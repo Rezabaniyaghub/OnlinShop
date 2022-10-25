@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using onlineshopping.Models;
 using onlineshopping.Srvices.Entites;
 
@@ -8,9 +10,12 @@ namespace onlineshopping.Controllers
     public class StudentController : Controller
     {
         private readonly AppDbContext _appDbContext;
-        public StudentController(AppDbContext appDbContext)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public StudentController(AppDbContext appDbContext, IWebHostEnvironment webHostEnvironment)
         {
             _appDbContext = appDbContext;
+            _webHostEnvironment = webHostEnvironment;
         }
         #endregion
 
@@ -29,13 +34,26 @@ namespace onlineshopping.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View(new Student());
+            return View(new StudentModel());
         }
 
         [HttpPost]
-        public IActionResult Create(Student model)
+        public async Task<IActionResult> Create(StudentModel model)
         {
-            _appDbContext.Students.Add(model);
+
+           var url=await Upload(model.ProfilePicture);
+
+
+
+            var student = new Student
+            {
+                Address = model.Address,
+                BirthDate = model.BirthDate,
+                CellPhone = model.CellPhone,
+                FatherName = model.FatherName,
+                ImageUrl=url
+            };
+            _appDbContext.Students.Add(student);
             var result = _appDbContext.SaveChanges();
             if (result > 0)
                 return RedirectToAction(nameof(Index));
@@ -83,5 +101,41 @@ namespace onlineshopping.Controllers
             return View(model);
         }
         #endregion
+
+        [HttpGet]
+        public IActionResult Sample()
+        {
+            return View();
+        }
+       
+        private async Task<string> Upload(IFormFile myfile)
+        {
+            try
+            {
+                string dir = Path.Combine(_webHostEnvironment.WebRootPath, "rezafiles");
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+                if (myfile.Length > 0)
+                {
+                    string filePath = Path.Combine(dir, myfile.FileName);
+                    using (Stream fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await myfile.CopyToAsync(fileStream);
+                        return filePath;
+                    }
+                }
+                return "";
+            }
+            catch (Exception e)
+            {
+
+                return "";
+            }
+
+            
+        }
+
     }
 }
